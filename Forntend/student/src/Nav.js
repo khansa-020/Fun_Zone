@@ -6,7 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const Nav = () => {
     const [showNavMob, setShowNavMob] = useState(false);
-    const navigate = useNavigate();
+//    const navigate = useNavigate();
   return (
     <>
       <nav className="main-nav">
