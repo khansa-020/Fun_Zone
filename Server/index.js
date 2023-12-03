@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 require("./db/config")
-const User= ("/User");
+const User= require("./User");
 
 app.use(express.json())
 app.post("/",(req, res) => {
