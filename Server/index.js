@@ -1,35 +1,24 @@
-// const express = require('express');
-// const app = express();
-// const port = 5000;
-
-// app.get('/', (req, res) => {
-//   res.send('this is server!');
-// });
-
-// app.listen(port, () => {
-//   console.log(`Server is running on ${port}`);
-// });
 const express = require("express");
 const app = express();
+require("./db/config")
+const User= ("/User");
 
-const mongoose = require('mongoose');
-
-const DB = async () => {
-  try {
-    await mongoose.connect("mongodb://localhost:27017/FunZone", {
-    });
-    console.log("Connection Successful");
-  } catch (error) {
-    console.error("Connection Error:", error.message);
-  }
-};
-
-// Call the DB function to establish the connection
-DB();
-
-app.get("/", (req, res) => {
-  res.send("App is working");
-  console.log("Server is running");
+app.use(express.json())
+app.post("/",(req, res) => {
+  //let user=new User(req.body);
+  //let result=await user.save();
+  res.send(req.body);
+  console.log("Server is running...");
 });
 
 app.listen(5000);
+
+// app.use(express.json())
+// app.post("/", async(req, res) => {
+//   let user=new User(req.body);
+//   let result=await user.save();
+//   res.send(result);
+//   console.log("Server is running...");
+// });
+
+// app.listen(5000);
