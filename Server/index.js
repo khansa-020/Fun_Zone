@@ -3,6 +3,9 @@ const cors= require("cors");
 const app = express();
 require("./db/config")
 const User= require("./models/User");
+const userRoutes = require('./routes/user.js');
+
+app.use('/api/user', userRoutes);
 
 app.use(express.json())
 app.use(cors());

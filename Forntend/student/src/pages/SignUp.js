@@ -1,5 +1,5 @@
 // App.js
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
 
@@ -10,13 +10,13 @@ const SignUp = () => {
         email: '',
         password: '',
     });
-    // const [username, setUsername] = useState('');
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
-
-// const collectData=()=>{
-//     console.warn(username,email,password);}
-
+    
+    useEffect(() => {
+        const auth = localStorage.getItem('user');
+        if (auth) {
+          navigate("/")
+        }
+      })
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };

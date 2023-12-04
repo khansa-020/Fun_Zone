@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import {Link} from "react-router-dom";
+import {Link ,useNavigate} from "react-router-dom";
 import './styles/nav.css';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
 const Nav = () => {
     const [showNavMob, setShowNavMob] = useState(false);
-//    const navigate = useNavigate();
+    const auth = localStorage.getItem('user');
+    const navigate = useNavigate();
+    const logout = () => {
+      localStorage.clear();
+      navigate("/home")
+}
+
   return (
     <>
       <nav className="main-nav">
@@ -26,12 +32,14 @@ const Nav = () => {
           </ul>
         </div>
         <div className="AccountBtn">
-          <button  className="butn signup">
-          <Link to="/signup">Sign up</Link>
-          </button>
-          <button className="butn login">
-          <Link to="/login">Log In</Link>
-          </button>
+         {auth ?
+            <button><Link className="btn btn-primary" onClick={logout} to="/signup">Logout</Link></button>
+            :
+            <>
+          <button  className="butn signup"><Link to="/signup">Sign up</Link></button>
+          <button className="butn login"><Link to="/login">Log In</Link></button>
+          </>
+          }
         </div>
         <div className={showNavMob ? "hamburgerCross" : "hamburger-menu"}>
           <button className="iconHamburger" onClick={() => setShowNavMob(!showNavMob)} >
