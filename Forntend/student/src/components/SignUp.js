@@ -1,7 +1,10 @@
 // App.js
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+
 
 const SignUp = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username: '',
         email: '',
@@ -29,6 +32,8 @@ const SignUp = () => {
                 body: JSON.stringify(formData),
             });
             if (response.ok) {console.log('Registration successful!');
+            // Redirect to the home page after successful registration
+            navigate('/login');
             } else { console.error('Registration failed.');
             } }
         catch (error) {console.error('Error during registration:', error);
