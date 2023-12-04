@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {Link} from "react-router-dom";
-import './nav.css';
+import './styles/nav.css';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -20,9 +20,9 @@ const Nav = () => {
             <li><Link to="/contactus">Contact Us</Link></li>
             <li><Link to="/showcourses">Courses</Link></li>
             <li><Link to="/tools">Tools</Link></li>
-            <li className="onmob">
+            {/* <li className="onmob">
               <a>Account</a>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="AccountBtn">
