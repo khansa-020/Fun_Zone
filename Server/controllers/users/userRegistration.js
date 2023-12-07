@@ -1,4 +1,4 @@
-const User = require("../../models/User");
+const User = require("../../models/Users");
 const { hashPassword } = require("../../helpers/hashPassword");
 const { createToken } = require("../../helpers/jwt"); // Import the createToken function
 

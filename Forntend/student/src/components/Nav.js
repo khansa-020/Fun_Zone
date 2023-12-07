@@ -36,10 +36,12 @@ const Nav = () => {
             <button><Link className="btn btn-primary" onClick={logout} to="/signup">Logout</Link></button>
             :
             <>
-          <button  className="butn signup"><Link to="/signup">Sign up</Link></button>
+          {/* <button  className="butn signup"><Link to="/signup">Sign up</Link></button> */}
           <button className="butn login"><Link to="/login">Log In</Link></button>
           </>
           }
+         <button  className="butn signup"><Link to="/signup">Sign up</Link></button>
+
         </div>
         <div className={showNavMob ? "hamburgerCross" : "hamburger-menu"}>
           <button className="iconHamburger" onClick={() => setShowNavMob(!showNavMob)} >

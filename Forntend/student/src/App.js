@@ -2,6 +2,7 @@ import './App.css';
 import Nav from './components/Nav';
 
 import LandingPage from './pages/LandingPage';
+import Dashboard from './pages/Dashboard';
 import SignUp from './pages/SignUp';
 import LogIn from './pages/LogIn';
 import ErrorPage from './pages/ErrorPage'
@@ -20,6 +21,7 @@ function App() {
 <Route path='/showcourses' element={<h1>course</h1>} />
 <Route path='/tools' element={<h1>tools</h1>} />
 
+<Route path='/dashboard' element={<h1><Dashboard/></h1>} />
 <Route path='/signup' element={<h1><SignUp/></h1>} />
 <Route path='/login' element={<h1><LogIn/></h1>} />
 <Route path="*" element={<ErrorPage/>} />

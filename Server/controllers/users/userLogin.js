@@ -1,6 +1,7 @@
-const User = require("../../models/User");
+const User = require("../../models/Users");
 const { createToken } = require("../../helpers/jwt");
 const { passwordCompare } = require("../../helpers/hashPassword");
+
 
 const userLogin = async (req, res) => {
     try {
@@ -12,22 +13,26 @@ const userLogin = async (req, res) => {
 
         const userLogin = await User.findOne({ email: email });
 
+        console.log('userLogin:', userLogin); // Add this line for logging
+
         if (userLogin) {
             // Hashing Password
             const isMatch = await passwordCompare(password, userLogin.password);
+
+            console.log('isMatch:', isMatch); // Add this line for logging
 
             if (!isMatch) {
                 return res.status(400).json({ status: "400", message: "Invalid Email or Password" });
             }
 
-            // Generate JWT Token
-            const token = createToken(userLogin, false, '1d');
+            // //Generate JWT Token
+            // const token = createToken(userLogin, false, '1d');
 
-            // Save the token in the user document
-            userLogin.tokens = userLogin.tokens.concat({ token });
-            await userLogin.save();
+            // // Save the token in the user document
+            // userLogin.tokens = userLogin.tokens.concat({ token });
+            // await userLogin.save();
 
-            res.json({ status: "success", message: "Login Success", token });
+            res.json({ status: "success", message: "Login Success"/* , token */ });
 
         } else {
             res.status(400).json({ message: "Invalid Email or Password" });
@@ -38,5 +43,4 @@ const userLogin = async (req, res) => {
         res.status(500).json({ error: "Internal Server Error" });
     }
 };
-
-module.exports = userLogin;
+module.exports = {userLogin};

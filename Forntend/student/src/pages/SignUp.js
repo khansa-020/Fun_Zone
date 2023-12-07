@@ -1,4 +1,4 @@
-// App.js
+//import axios from 'axios';
 import React, { useState , useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 
@@ -23,10 +23,10 @@ const SignUp = () => {
 
 
 //handle submit -submit button
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await fetch('http://localhost:5000', {
+   const handleSubmit = async (e) => {
+  e.preventDefault();
+      try {
+            const response = await fetch('http://localhost:5000/api/user/userSignup', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json', },
                 body: JSON.stringify(formData),

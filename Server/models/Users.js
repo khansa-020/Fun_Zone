@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-//const jwt = require('jsonwebtoken')
 
-const userSchema = new mongoose.Schema({
+const usersSchema = new mongoose.Schema({
     username:{
         type: String,
         required: true,
@@ -46,4 +45,5 @@ const userSchema = new mongoose.Schema({
 });
 
 // Create a model based on the schema
-module.exports  = mongoose.model('signup', userSchema);
+const User = mongoose.model("users", usersSchema);
+module.exports = User;
