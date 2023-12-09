@@ -1,0 +1,59 @@
+/* eventsadmin.module.css */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.eventList {
+  width: 60%;
+}
+
+.eventItem {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.editForm {
+  width: 30%;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.editForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.editForm input,
+.editForm textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.editButtons {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.addEventForm {
+  width: 30%;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.addEventForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.addEventForm input,
+.addEventForm textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
