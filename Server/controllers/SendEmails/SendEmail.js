@@ -17,7 +17,7 @@ const SendEmail = async (req, res) => {
 
     // Craft the email content
     const mailOptions = {
-      from: 'your_email@gmail.com',
+      from: 'khansaabdullah020@gmail.com',
       to: 'khansaaraein@gmail.com',
       subject: 'Contact the Team',
       text: `Username: ${username}\nEmail: ${email}\nMessage: ${message}`,
