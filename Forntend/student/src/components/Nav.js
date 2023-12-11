@@ -10,7 +10,7 @@ const Nav = () => {
     const navigate = useNavigate();
     const logout = () => {
       localStorage.clear();
-      navigate("/home")
+      navigate("/")
 }
 
   return (
