@@ -21,10 +21,11 @@ const Nav = () => {
         </div>
         <div className={showNavMob ? "navbar-link mobile-navbar-link" : "navbar-link"}>
           <ul>
-            <li><Link to="/home">Home</Link></li>
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contactus">Contact Us</Link></li>
             <li><Link to="/showcourses">Courses</Link></li>
+            <li><Link to="/events">Events</Link></li>
             <li><Link to="/tools">Tools</Link></li>
             {/* <li className="onmob">
               <a>Account</a>

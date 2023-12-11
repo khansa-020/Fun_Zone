@@ -1,8 +1,11 @@
 import './App.css';
 // import Nav from './components/Nav';
 
-import LandingPage from './pages/LandingPage';
+import LandingPage from './pages/home/Home';
+import ContactUs from './pages/contact/ContactUs';
+import About from './pages/aboutus/About'
 import Dashboard from './pages/Dashboard';
+import EventCard from './pages/Events/EventCard';
 import SignUp from './pages/Signup/SignUp';
 import LogIn from './pages/Login/LogIn';
 import ErrorPage from './pages/ErrorPage'
@@ -16,8 +19,9 @@ function App() {
        {/* <Nav/> */}
 <Routes>
 <Route path='/' element={<h1><LandingPage/></h1>} />
-<Route path='/about' element={<h1>about</h1>} />
-<Route path='/contactus' element={<h1>contact</h1>} />
+<Route path='/about' element={<h1><About/></h1>} />
+<Route path='/contactus' element={<h1><ContactUs/></h1>} />
+<Route path='/events' element={<h1><EventCard/></h1>} />
 <Route path='/showcourses' element={<h1>course</h1>} />
 <Route path='/tools' element={<h1>tools</h1>} />
 
