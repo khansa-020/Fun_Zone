@@ -1,0 +1,22 @@
+/* events.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  
+  .eventList {
+    list-style: none;
+    padding: 0;
+    background-color: rgb(249, 243, 137);
+  }
+  
+  .eventCard {
+    width: calc(25% - 32px);
+    margin: 16px;
+    background-color: rgb(226, 181, 244);
+
+  }
+  

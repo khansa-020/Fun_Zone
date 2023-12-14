@@ -4,8 +4,9 @@ import './App.css';
 import LandingPage from './pages/home/Home';
 import ContactUs from './pages/contact/ContactUs';
 import About from './pages/aboutus/About'
+import Tools from './pages/Tools/ArtisticTools'
 import Dashboard from './pages/Dashboard';
-import EventCard from './pages/Events/EventCard';
+import EventCard from './pages/Events/Events';
 import SignUp from './pages/Signup/SignUp';
 import LogIn from './pages/Login/LogIn';
 import ErrorPage from './pages/ErrorPage'
@@ -23,7 +24,7 @@ function App() {
 <Route path='/contactus' element={<h1><ContactUs/></h1>} />
 <Route path='/events' element={<h1><EventCard/></h1>} />
 <Route path='/showcourses' element={<h1>course</h1>} />
-<Route path='/tools' element={<h1>tools</h1>} />
+<Route path='/tools' element={<h1><Tools/></h1>} />
 
 <Route path='/' element={<h1><LandingPage/></h1>} />
 <Route path='/dashboard' element={<h1><Dashboard/></h1>} />

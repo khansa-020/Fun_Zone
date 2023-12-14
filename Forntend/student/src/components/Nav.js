@@ -17,7 +17,7 @@ const Nav = () => {
     <>
       <nav className="main-nav">
         <div className="logo">
-          <h1>Fun<span style={{ color: "#F15946" }}>Zone</span></h1>
+          <h1 id="logo">Fun<span style={{ color: "#F15946" }}>Zone</span></h1>
         </div>
         <div className={showNavMob ? "navbar-link mobile-navbar-link" : "navbar-link"}>
           <ul>

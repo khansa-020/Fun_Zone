@@ -81,7 +81,7 @@ export default function LogIn() {
                         )}
                         </button>
         </div>
-        <input type="submit" value="Register" />
+        <input type="submit" value="Log In" />
         <br />
         <p className='pt-3' style={{fontSize: "1.6rem", paddingTop:"8px"}}>Don't have an Account yet <Link to='/signup'  style={{
                   cursor: "pointer",

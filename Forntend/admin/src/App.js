@@ -3,8 +3,8 @@ import React from 'react';
 // import LogIn from './pages/Login/LogIn';
 import AdminDashboard from './pages/Dashboard/AdminDashboard';
 import WebsiteContent from './pages/Websitecontent/main/WebsiteContent'
-import Events from './components/Events/Events';
-import EventsAdmin from './components/Events/EventsAdmin';
+import Events from './components/EventComponent/Events';
+import EventsAdmin from './components/EventComponent/EventsAdmin';
 function App() {
   return (
     <>

@@ -13,12 +13,37 @@ const getEvents = async (req, res) => {
 
 const updateEvent = async (req, res) => {
   const { eventId } = req.params;
-  const { eventName, description } = req.body;
+
+  // Destructure fields from req.body
+  const {
+    eventName,
+    description,
+    hostedBy,
+    price,
+    category,
+    posterImage,
+    date,
+    time,
+    venue,
+    maxAttendees,
+  } = req.body;
 
   try {
+    // Update the fields as needed
     const updatedEvent = await Event.findByIdAndUpdate(
       eventId,
-      { eventName, description },
+      {
+        eventName,
+        description,
+        hostedBy,
+        price,
+        category,
+        posterImage,
+        date,
+        time,
+        venue,
+        maxAttendees,
+      },
       { new: true }
     );
 
@@ -30,10 +55,36 @@ const updateEvent = async (req, res) => {
 };
 
 const addEvent = async (req, res) => {
-  const { eventName, description } = req.body;
+  // Destructure fields from req.body
+  const {
+    eventName,
+    description,
+    hostedBy,
+    price,
+    category,
+    posterImage,
+    date,
+    time,
+    venue,
+    maxAttendees,
+  } = req.body;
 
   try {
-    const newEvent = new Event({ eventName, description });
+    // Create a new event with the provided fields
+    const newEvent = new Event({
+      eventName,
+      description,
+      hostedBy,
+      price,
+      category,
+      posterImage,
+      date,
+      time,
+      venue,
+      maxAttendees,
+    });
+
+    // Save the new event
     const savedEvent = await newEvent.save();
 
     res.status(201).json(savedEvent);
