@@ -34,7 +34,8 @@ export default function LogIn() {
       const formData = { email, password };
       const response = await axios.post("http://localhost:5000/api/user/userLogin", formData);
       if(response){
-        localStorage.setItem("user", JSON.stringify(response));
+        // localStorage.setItem("user", JSON.stringify(response));
+        localStorage.setItem("authenticated", "true"); // Set a flag to indicate authentication
         navigate("/dashboard")
       }else{
         alert("Plz Enter correct details")

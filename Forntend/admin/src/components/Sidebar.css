@@ -1,16 +1,19 @@
 /* Sidebar.css */
+#body{
+  padding: 10px 20px;
+}
 #sidebar {
     height: 100vh;
-    width: 200px;
+    width: 280px;
     position: fixed;
-    left: 0;
-    top: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-    transition: background-color 0.3s ease; /* Add a transition for smooth color change */
-  }
+    padding-top: 80px;
+    border: #333;
+    border-radius: 20px;
+    background: linear-gradient(#d4b9f8, #e8afbf);
+    transition: background-color 0.3s ease;
+}
   
   #sidebar.dark-mode {
     background-color: #333; /* Dark mode background color */
@@ -18,11 +21,15 @@
   
   #sidebar a {
     text-decoration: none;
-    color: #875cea;
-    padding: 10px 0;
+    color: #494552;
+    padding: 10px 20px;
     width: 100%;
-    text-align: center;
-    transition: color 0.3s ease; /* Add a transition for smooth color change */
+    font-weight:500;
+    font-size: 2.3rem;
+    transition:color 0.3s ease; /*Addatransitionforsmoothcolorchange*/
+  }
+  #sidebar a:hover{
+    background-color:#ffffff;
   }
   
   #sidebar.dark-mode a {

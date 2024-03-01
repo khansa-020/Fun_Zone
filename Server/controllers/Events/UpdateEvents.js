@@ -1,5 +1,7 @@
 // controllers/eventController.js
 const Event = require('../../models/Event');
+// const multer = require('multer');
+// const upload = multer();
 
 const getEvents = async (req, res) => {
   try {
@@ -14,6 +16,10 @@ const getEvents = async (req, res) => {
 const updateEvent = async (req, res) => {
   const { eventId } = req.params;
 
+  try {
+    // Get file data from Multer
+    const fileData = req.file;
+  
   // Destructure fields from req.body
   const {
     eventName,
@@ -21,14 +27,18 @@ const updateEvent = async (req, res) => {
     hostedBy,
     price,
     category,
-    posterImage,
+    posterImage =fileData ? fileData.buffer.toString('base64') : undefined,
     date,
     time,
     venue,
     maxAttendees,
   } = req.body;
 
-  try {
+    // Use the file data accordingly (e.g., store file path in the database)
+    // const posterImage = fileData ? fileData.buffer.toString('base64') : undefined;
+
+
+  // try {
     // Update the fields as needed
     const updatedEvent = await Event.findByIdAndUpdate(
       eventId,
@@ -55,6 +65,9 @@ const updateEvent = async (req, res) => {
 };
 
 const addEvent = async (req, res) => {
+  // Get file data from Multer
+  const fileData = req.file;
+
   // Destructure fields from req.body
   const {
     eventName,
@@ -62,12 +75,16 @@ const addEvent = async (req, res) => {
     hostedBy,
     price,
     category,
-    posterImage,
+    posterImage = fileData ? fileData.buffer.toString('base64') : undefined,
     date,
     time,
     venue,
     maxAttendees,
   } = req.body;
+
+ // Use the file data accordingly (e.g., store file path in the database)
+//  const posterImage = fileData ? fileData.buffer.toString('base64') : undefined;
+
 
   try {
     // Create a new event with the provided fields

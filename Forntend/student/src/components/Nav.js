@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import {Link ,useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 import './styles/nav.css';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
 const Nav = () => {
     const [showNavMob, setShowNavMob] = useState(false);
-    const auth = localStorage.getItem('user');
-    const navigate = useNavigate();
-    const logout = () => {
-      localStorage.clear();
-      navigate("/")
-}
+//  const auth = localStorage.getItem('user');
+//     const navigate = useNavigate();
+//     const logout = () => {
+//       localStorage.clear();
+//       navigate("/")
+// }
 
   return (
     <>
@@ -33,14 +33,14 @@ const Nav = () => {
           </ul>
         </div>
         <div className="AccountBtn">
-         {auth ?
+         {/* {auth ?
             <button><Link className="btn btn-primary" onClick={logout} to="/signup">Logout</Link></button>
             :
-            <>
+            <> */}
           {/* <button  className="butn signup"><Link to="/signup">Sign up</Link></button> */}
           <button className="butn login"><Link to="/login">Log In</Link></button>
-          </>
-          }
+          {/* </>
+          } */}
          <button  className="butn signup"><Link to="/signup">Sign up</Link></button>
 
         </div>

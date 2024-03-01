@@ -1,0 +1,58 @@
+.ApplyTrainer{
+        font-family: 'Arial', sans-serif;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #cfcdcd;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      
+      .form-grid {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 20px;
+      }
+      
+      .personal-info,
+      .education-info,
+      .other-info {
+        grid-column: span 1;
+      }
+      
+      h1 {
+        margin-bottom: 5px;
+      }
+      
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+      
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      } 
+      button{
+        grid-column: span 3;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        color:white ;
+        border: none;
+        border-radius: 0.5rem;
+        background: var(--color-danger);
+        transition: all 100ms ease-out;
+      }
+      button:hover{
+        cursor: pointer;
+        color: var(--orange);
+        background: transparent;
+        border: 2px solid var(--color-secondary);
+      }    
+
+ 
+  

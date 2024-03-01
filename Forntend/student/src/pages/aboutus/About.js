@@ -1,18 +1,18 @@
 import React from "react";
 import projAnimation from "../../animations/man-working.json";
-//import Lottie from "react-lottie";
+import Lottie from "react-lottie";
 import "./about.css";
 import Navbar from "../../components/Nav";
 const About = () => {
-  // const defaultOptions = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: projAnimation,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //     color: "red",
-  //   },
-  // };
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: projAnimation,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+      color: "red",
+    },
+  };
   return (
     <>
       <Navbar />
@@ -36,7 +36,7 @@ const About = () => {
           </div>
         </div>
         <div className="aboutimg">
-          {/* <Lottie options={defaultOptions} /> */}
+          <Lottie options={defaultOptions} />
         </div>
       </div>
     </>

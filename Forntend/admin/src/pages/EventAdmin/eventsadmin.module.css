@@ -1,0 +1,101 @@
+/* eventsadmin.module.css */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+}
+
+.eventList {
+  width: 70%;
+  background-color: rgb(252, 252, 237);
+}
+.eventItem img{
+  width: 100%;
+  height: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  grid-column: 1/3;
+}
+.eventItem h3{
+  font-weight: 700;
+  font-size:x-large;
+}
+.eventItem p{
+padding: 8px;
+display:grid;
+font-weight: 500;
+font-size:large;
+}
+.eventItem button{
+  width: 50%;
+  height: 40px;
+  margin-top: 40px;
+}
+.eventItem {
+  border: 1px solid #ccc;
+  padding: 30px;
+  margin-bottom: 10px;
+  background-color: rgb(243, 199, 255);
+  display: grid;
+  grid-column: 3;
+}
+
+.editForm {
+  width: 30%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: rgb(255, 191, 253);
+}
+
+.editForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.editForm input,
+.editForm textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 20px;
+
+}
+
+.editButtons {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.addEventForm {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: rgb(255, 198, 218);
+}
+
+.addEventForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: larger;
+}
+
+.addEventForm input,
+.addEventForm textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #f15946;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    transition: 0.5s;
+}

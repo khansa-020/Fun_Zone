@@ -27,7 +27,8 @@ const eventSchema = new mongoose.Schema({
   },
 
   posterImage: { 
-    type: Buffer 
+    // type: Buffer 
+    type: String, 
   }, // Store image data as Buffer
   
   date: { 
