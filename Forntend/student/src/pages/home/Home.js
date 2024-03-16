@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 // import Content from "../Content";
-import Features from "./Features";
+// import Features from "./Features";
 // import Footer from "../Footer";
 import HeroSection from "./HeroSection";
 import Contact from "./Contact";
@@ -9,7 +9,7 @@ import HomeFooter from "./HomeFooter";
 import Navbar from "../../components/Nav";
 import FeaturesT from "./FeaturesT";
 import VideoSec from "./VideoSec";
-import HeroSect from "./HeroSect";
+// import HeroSect from "./HeroSect";
 // import News from '../News';
 // import { BrowserRouter as Router } from 'react-router-dom';
 
