@@ -1,0 +1,7 @@
+.Profilepage{
+   display: grid;
+   grid-template-columns: 18vw 35vw 25vw;
+   column-gap: 2rem;
+   position: relative;
+   background-color: antiquewhite;
+}

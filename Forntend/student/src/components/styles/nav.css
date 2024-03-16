@@ -44,7 +44,7 @@
   }
   
   #logo {
-font-size: 4rem;
+font-size: 4.5rem;
   }
 
   .navbar-link {
@@ -60,9 +60,9 @@ font-size: 4rem;
   
   .AccountBtn {
     grid-column: 4/5;
-    /* text-align: right; */
+    text-align: right;
     height: 10rem;
-    display: grid;
+    display: flex;
     grid-template-columns: 2fr repeat(2, 1fr);
     align-items: center;
     justify-content: flex-end;
@@ -88,9 +88,6 @@ font-size: 4rem;
     border-radius: 0.8rem !important;
     cursor: pointer; /* Add cursor style to indicate the button is clickable */
     transition: background-color 0.3s; /* Add a smooth transition effect for background color */
-    display: flex; /* Make the button a flex container */
-    align-items: center; /* Align items in the center */
-    justify-content: center; /* Center content horizontally */
     text-decoration: none; /* Remove default link underline */
   }
   .login a {
@@ -113,6 +110,7 @@ font-size: 4rem;
   
   .signup {
     box-sizing: border-box;
+    margin-left: 1.5rem;
     width: 9.6rem;
     height: 4.4rem;
     border: 1px solid #f15946;
@@ -212,7 +210,7 @@ font-size: 4rem;
       display: flex;
       justify-content: space-around;
       flex-direction: column;
-      align-items: start;
+      align-items: flex-start;
     }
   
     .mobile-navbar-link ul li:first-child {

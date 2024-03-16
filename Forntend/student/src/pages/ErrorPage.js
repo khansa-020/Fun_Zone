@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import images from "../images/404.jpg"
 
 export default function ErrorPage() {
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
-      <h1>Oops! Something went wrong!</h1>
+    <div style={{ textAlign: 'center', margin: '20px' }}>
+      <h1  style={{ fontWeight:"bold", padding:"1rem" }}>Oops! Something went wrong!</h1>
       <p>We apologize for the inconvenience. It seems there's an issue with our transport service.</p>
-      <img
-        src="https://example.com/error-image.png" // Replace with the URL of an appropriate error image
+     <div className="img" style={{ maxWidth: '50%', marginRight:"42rem", marginLeft:"42rem" , objectFit:"contain"}}> <img
+        src={images} // Replace with the URL of an appropriate error image
         alt="Error Illustration"
-        style={{ maxWidth: '100%', height: 'auto', marginBottom: '20px' }}
-      />
+        style={{ display:"block",   opacity: "0.8", padding:"1rem" }}
+        /></div>
       <p>Please try again later or contact our support team for assistance.</p>
       <div style={{ marginTop: '20px' }}>
         <Link to="/" style={{ marginRight: '20px' }}>

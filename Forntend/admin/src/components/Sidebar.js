@@ -1,12 +1,12 @@
 // Sidebar.js
 import React from 'react';
 import PropTypes from 'prop-types';
-//import './Sidebar.css';
+import './Sidebar.css';
 import Toggle from './Toggle';
 
 const Sidebar = ({ links, onToggle }) => {
   return (
-    <div>
+    <div id="body">
       <div id="sidebar">
         {links.map((link, index) => (
           <a key={index} href={link.url}>

@@ -6,7 +6,7 @@ const Hero = () => {
   const data = [
     {
       image: "/logo.svg",
-      title: "Welcome to TheBodyDoctors",
+      title: "Welcome to Our Course",
       caption: "Discover the power within and soar to new heights.",
       buttonText: "Join us",
     },

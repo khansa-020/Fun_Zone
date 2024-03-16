@@ -1,18 +1,27 @@
 /* eventcard.module.css */
 .card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #7248b5;
+  border-radius: 15px;
   padding: 16px;
   margin: 16px;
   cursor: pointer;
-  transition: box-shadow 0.3s;
+  transition:box-shadow 0.3s;
+  background-color: rgb(245, 245, 245);
+  -webkit-transition:box-shadow 0.3s;
+  -moz-transition:box-shadow 0.3s;
+  -ms-transition:box-shadow 0.3s;
+  -o-transition:box-shadow 0.3s;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
 .card:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.title {
+.eventName {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 8px;

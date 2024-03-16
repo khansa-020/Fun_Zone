@@ -1,22 +1,22 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import gamecontroller from "../../animations/game-controller.json";
-//import Lottie from "react-lottie";
+import Lottie from "react-lottie";
 import "./styles/heroSec.css";
 const HeroSect = () => {
   const navigate = useNavigate();
   const authPage = () => {
     navigate("/auth");
   };
-  // const defaultOptions = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: gamecontroller,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //     color: "red",
-  //   },
-  // };
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: gamecontroller,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+      color: "red",
+    },
+  };
   return (
     <>
       <div className="heroSec">
@@ -37,12 +37,12 @@ const HeroSect = () => {
             showcased.Planning and collaboration tools make learning management
             easier !
           </p>
-          <button onClick={authPage} className="getStarted">
+          <button onClick={authPage} className="getStarted" id="get">
             GetStarted
           </button>
         </div>
         <div className="animation">
-          {/* <Lottie options={defaultOptions} /> */}
+          <Lottie options={defaultOptions} />
         </div>
       </div>
     </>
