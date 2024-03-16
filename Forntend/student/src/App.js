@@ -16,6 +16,9 @@ import Profile from './pages/profile/Profile';
 import ApplyTrainer from './pages/ApplyForTrainer/TrainerRequest';
 import ChatRoom from './pages/Chat/ChatRoom';
 
+import SocialPage from './pages/Dashboard/socialpage/SocialPage';
+import ProfilePage from './pages/Dashboard/profilepage/ProfilePage';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -37,6 +40,9 @@ function App() {
 <Route path='/signup' element={<SignUp/>} />
 <Route path='/login' element={<LogIn/>} />
 <Route path="*" element={<ErrorPage/>} />
+
+<Route path="/SocialPage" element={<SocialPage />} />
+<Route path="/ProfilePage" element={ <ProfilePage />}/>
 
 <Route path='/profile' element={<Profile/>}/>
 <Route path='/chatroom' element={<ChatRoom/>}/>
