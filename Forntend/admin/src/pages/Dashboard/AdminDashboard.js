@@ -17,6 +17,10 @@ const AdminDashboard = () => {
     { url: '/WebsiteContent', label: 'Content' },
     { url: '/TrainerRequests', label: 'Trainer Requests' },
     { url: '/StudentRecord', label: 'Student Record' },
+    { url: '/StudentRecord', label: 'Courses' },
+    { url: '/StudentRecord', label: 'Create Course' },
+
+
 
 
     // Add more admin-specific links

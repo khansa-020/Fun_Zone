@@ -52,7 +52,7 @@ const SideBar= ()=> {
             </span>
             <h3>Chat</h3>
           </NavLink>
-          <NavLink className="menu-item" to="/">
+          <NavLink className="menu-item" to="/trainerRequest">
             <span className="iconImg">
               <i className="uil uil-user-check"></i>
             </span>
