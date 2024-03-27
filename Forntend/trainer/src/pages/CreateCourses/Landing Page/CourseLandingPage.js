@@ -5,11 +5,11 @@ import Sidebar from '../Course Sidebar/CourseSidebar';
 import contentComponents from '../../CreateContent/contentComponent'; 
   
 function CourseLandingPage() {
-  const [selectedLink, setSelectedLink] = useState('link3'); // State to track the selected link
+  const [selectedLink, setSelectedLink] = useState('link3'); 
   
   const handleLinkClick = (link) => {
     setSelectedLink(link);
-    console.log('Selected Link:', link); // Add this line to log the selected link
+    console.log('Selected Link:', link); 
   };
 
   
