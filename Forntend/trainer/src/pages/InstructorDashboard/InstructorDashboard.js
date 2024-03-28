@@ -1,12 +1,13 @@
 import React from 'react';
-import Sidebar from './DashboardSidebar'; // Import the Sidebar component
+import Sidebar from './../../Constants/Sidebar/Sidebar'; 
 
-const Dashboard = () => {
+const InstructorDashboard = () => {
   const sidebarLinks = [
-    { path: '/dashboard/home', label: 'Courses' },
-    { path: '/dashboard/profile', label: 'Profile' },
-    { path: '/dashboard/settings', label: 'Performance' },
-    { path: '/dashboard/settings', label: 'M' },
+    { path: '/CreateCourse', label: 'Create Course' },
+    { path: '/InstructorProfile', label: 'Profile' },
+    { path: '/Performance', label: 'Performance' },
+    { path: '/CourseLandingPage', label: 'Manage Course' },
+    { path: '/View Courses', label: 'My Courses' },
     { path: '/dashboard/settings', label: 'Chat' },
 
   ];
@@ -21,4 +22,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default InstructorDashboard;
