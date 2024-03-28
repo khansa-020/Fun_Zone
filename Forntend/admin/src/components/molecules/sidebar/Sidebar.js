@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import { AiFillHome } from "react-icons/ai";
 import SidebarLinks from "./SidebarLinks";
 import { setSignedOut } from "../../../redux/containers/auth/actions";
-import { Main, General, GeneralSettting } from "../../../constants/Data";
+import { Main, GeneralSettting } from "../../../constants/Data";
 import { LiaTimesSolid } from "react-icons/lia";
 import { NavLink } from "react-router-dom";
 import styles from "./SidebarStyles.module.css";
@@ -44,7 +44,7 @@ const dispatch=useDispatch();
         } `}
       >
         <div className={styles.logo}>
-         <img src="/assets/logo/LogoDark.png" width={110} height={110}/>
+         <img src="/assets/logo/LogoDark.png" alt="" width={110} height={110}/>
         </div>
 
         <div className={styles.spaceY}>
