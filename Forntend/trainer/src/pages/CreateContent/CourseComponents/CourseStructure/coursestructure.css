@@ -1,0 +1,126 @@
+.head-para h2{
+    font-size: 30px; 
+    font-weight:700; 
+    font-family:Cambria;
+    padding: 20px 70px;
+    color: #333; 
+    margin-bottom: 25px;
+
+}
+
+
+.head-para h3{
+    font-size: 23px; 
+    font-weight:600; 
+    font-family:Cambria;
+    padding: 0px 70px;
+    color: #333; 
+    margin-bottom: 0px;
+}
+
+
+.head-para p{
+    font-size: 23px; 
+    font-weight:normal; 
+    font-family:'Gill Sans';
+    padding: 10px 70px;
+    color: #333; 
+    margin-bottom: 30px;
+    justify-content: space-around;
+}
+.structure{
+        font-size: 23px; 
+        font-weight:normal; 
+        font-family:'Gill Sans';
+        padding: 10px 70px;
+        color: #333; 
+}
+.structure li{
+    list-style:disc;
+    padding: 10px 20px;
+
+}
+
+
+
+/* styling of box-card */
+.box-card {
+    display: flex;
+    padding: 10px 70px;
+    background-color: hsl(229, 100%, 97%);
+  }
+  
+  .big-card {
+    flex: 1;
+    overflow: hidden;
+    margin-right: 20px; 
+  }
+  
+  .big-card h2 {
+    margin-top: 60px;
+    font-size: 27px; 
+    font-weight:900; 
+    font-family:sans-serif;
+    color: #333; 
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+
+  .big-card p{
+    margin-top: 20px;
+    font-size: 24px; 
+    font-weight:400; 
+    font-family:sans-serif;
+    color: #333; 
+    margin-bottom: 45px;
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+  
+  .small-card {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    width: 330px;
+    margin: 40px 20px;
+    background-color: #ffffff;
+    padding: 30px;
+    border: 3px outset #cecece; 
+  }
+  
+  .small-card img {
+    width: 50%;
+    height: auto;
+  }
+
+  .small-card h2{
+font-size: 22px;
+font-weight: bolder;
+padding: 20px 0px;
+  }
+
+  .small-card p{
+    font-size: 22px;
+    font-family: 'Gill Sans';
+    font-weight: 500;
+    padding:0px 10px;
+    text-align: center;
+      }
+  
+  .small-card button {
+    display: block;
+    width: 75%;
+    padding: 15px;
+    margin: 20px 10px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #ffffff;
+    border: 1px solid #6f6f6f;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .small-card button:hover {
+    background-color: #F15946; /* Change color on hover */
+  }

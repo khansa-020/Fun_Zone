@@ -1,0 +1,17 @@
+.course-expect {
+    padding: 20px 70px;
+  }
+  
+  .course-expect input {
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    padding: 20px;
+    margin: 10px 0px;
+    border: 1px solid black;
+  }
+  
+  .expect input::placeholder {
+    font-size: 22px; 
+    color: gray;
+  }
+  

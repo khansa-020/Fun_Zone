@@ -1,0 +1,22 @@
+
+.h2-p h2{
+    font-size: 25px; 
+    font-weight:600; 
+    font-family:Cambria;
+    padding: 0px 70px;
+    color: #333; 
+    margin-top: 40px;
+}
+
+
+.h2-p p{
+    font-size: 23px; 
+    font-weight:normal; 
+    font-family:'Gill Sans';
+    padding: 20px 70px;
+    color: #333; 
+    justify-content: space-around;
+}
+.obj-main{
+    padding: 10px 70px;
+}
