@@ -1,5 +1,6 @@
 import React from 'react';
 import Sidebar from './../../Constants/Sidebar/Sidebar'; 
+import './InstructorDashboard.css';
 
 const InstructorDashboard = () => {
   const sidebarLinks = [
@@ -8,7 +9,7 @@ const InstructorDashboard = () => {
     { path: '/Performance', label: 'Performance' },
     { path: '/CourseLandingPage', label: 'Manage Course' },
     { path: '/View Courses', label: 'My Courses' },
-    { path: '/dashboard/settings', label: 'Chat' },
+    { path: '/Chat', label: 'Chat' },
 
   ];
 
