@@ -1,5 +1,6 @@
 import React from 'react';
 import Sidebar from './../../Constants/Sidebar/Sidebar'; 
+import './InstructorDashboard.css';
 
 const InstructorDashboard = () => {
   const sidebarLinks = [
