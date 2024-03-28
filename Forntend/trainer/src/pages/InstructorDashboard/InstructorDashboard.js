@@ -3,9 +3,12 @@ import Sidebar from './DashboardSidebar'; // Import the Sidebar component
 
 const Dashboard = () => {
   const sidebarLinks = [
-    { path: '/dashboard/home', label: 'Home' },
+    { path: '/dashboard/home', label: 'Courses' },
     { path: '/dashboard/profile', label: 'Profile' },
-    { path: '/dashboard/settings', label: 'Settings' },
+    { path: '/dashboard/settings', label: 'Performance' },
+    { path: '/dashboard/settings', label: 'M' },
+    { path: '/dashboard/settings', label: 'Chat' },
+
   ];
 
   return (
