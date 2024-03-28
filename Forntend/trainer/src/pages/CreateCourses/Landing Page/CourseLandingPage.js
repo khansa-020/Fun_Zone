@@ -1,35 +1,35 @@
-import React, { useState } from 'react';
-import './CourseLandingPage.css';
-import Logo from '../../../Constants/Logo/logo';
-import Sidebar from '../Course Sidebar/CourseSidebar';
-import contentComponents from '../../CreateContent/contentComponent'; 
+// import React, { useState } from 'react';
+// import './CourseLandingPage.css';
+// import Logo from '../../../Constants/Logo/logo';
+// import Sidebar from '../Course Sidebar/CourseSidebar';
+// import contentComponents from '../../CreateContent/contentComponent'; 
   
-function CourseLandingPage() {
-  const [selectedLink, setSelectedLink] = useState('link3'); 
+// function CourseLandingPage() {
+//   const [selectedLink, setSelectedLink] = useState('link3'); 
   
-  const handleLinkClick = (link) => {
-    setSelectedLink(link);
-    console.log('Selected Link:', link); 
-  };
+//   const handleLinkClick = (link) => {
+//     setSelectedLink(link);
+//     console.log('Selected Link:', link); 
+//   };
 
   
-  return (
-    <div id="landing-page">
-      <div className='logo-comon'>
-        <Logo showStepCount={false} /> 
-      </div>
+//   return (
+//     <div id="landing-page">
+//       <div className='logo-comon'>
+//         <Logo showStepCount={false} /> 
+//       </div>
   
 
-        <div className='left-side'>
-          <Sidebar selectedLink={selectedLink} handleLinkClick={handleLinkClick} />
-        </div>
+//         <div className='left-side'>
+//           <Sidebar selectedLink={selectedLink} handleLinkClick={handleLinkClick} />
+//         </div>
         
-        <div id="course-components" >
-          {contentComponents[selectedLink]}
-        </div>
-      </div>
-    );
-  }
+//         <div id="course-components" >
+//           {contentComponents[selectedLink]}
+//         </div>
+//       </div>
+//     );
+//   }
   
-  export default CourseLandingPage;
+//   export default CourseLandingPage;
   
