@@ -1,0 +1,45 @@
+  .p-h2{
+    padding: 5px 70px;
+    color: #252525; 
+  }
+  .p-h2 p{
+    font-size: 23px; 
+    font-weight:normal; 
+    font-family:'Gill Sans';
+    margin-top: 20px;
+    padding: 20px 0px;
+    justify-content: space-around;
+  }
+  
+  .p-h2 h2 {
+    font-size: 20px; 
+    margin-top: 40px;
+  }
+
+.fetch-input{
+    padding: 0px 70px;
+}
+
+.fetch-input h6{
+    font-size: 16px; 
+    font-weight:normal; 
+    font-family:'Gill Sans MT';
+    color: rgb(99, 99, 99);
+}
+  .fetch-input input {
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    padding: 20px;
+    margin: 10px 0px;
+    border: 1px solid rgb(78, 78, 78);
+  }
+  
+  .fetch-input input::placeholder {
+    font-size: 22px; 
+    color: gray;
+  }
+
+  .profile-link{
+    padding: 20px 70px;
+    font-size:20px;
+  }

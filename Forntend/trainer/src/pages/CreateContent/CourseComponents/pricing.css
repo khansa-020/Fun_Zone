@@ -1,0 +1,21 @@
+.text-head{
+    padding: 5px 70px;
+    color: #252525; 
+  }
+  .text-head p{
+    font-size: 23px; 
+    font-weight:normal; 
+    font-family:'Gill Sans';
+    margin-top: 20px;
+    padding: 20px 0px;
+    justify-content: space-around;
+  }
+  
+  .text-head h2 {
+    font-size: 20px; 
+    margin-top: 40px;
+  }
+
+  .price{
+    padding: 10px 70px;
+  }

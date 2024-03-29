@@ -1,0 +1,101 @@
+/* imageUpload.css */
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Ensure equal spacing between items */
+    background-color: rgb(255, 255, 255);
+    padding: 10px 70px;
+}
+  
+.dummy-image {
+    flex: 1; /* Occupy remaining space */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(184, 184, 184);
+}
+  
+.image-preview {
+    max-width: 475px;
+    max-height: 270px;
+}
+  
+.image-placeholder {
+    max-width: 475px;
+    max-height: 270px;
+    /* Add any placeholder image styling here */
+}
+  
+.text-button {
+    flex: 1.1; /* Occupy remaining space */
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    margin: 0px 12px;
+}
+  
+.image-guidelines {
+    padding: 0px 8px;
+    color: #696969;
+    text-align: justify;
+    font-size: 23px; 
+    font-weight: 100; 
+    font-family:'Gill Sans MT';
+}
+  
+/* .smal-card{
+    display: flex;
+    background-color: darkgoldenrod;
+    font-size: 20px;
+    color: grey;
+    width: 80%;
+    padding: 20px;
+    margin: 10px 20px;
+    border: 1px solid rgb(78, 78, 78);
+} */
+
+
+
+.select-file {
+    display: flex;
+    font-size: 22px;
+    color: rgb(94, 94, 94);
+    align-items: center;
+    margin: 30px 10px;
+    width: 95%; /* Adjust width as needed */
+    border: 1px solid #000000; 
+  }
+  
+  .file-selected {
+    flex: 1; /* Allow the text to grow and fill the space */
+    padding: 20px;
+    background-color: rgb(237, 237, 255);
+  }
+  
+  .upload-button {
+    margin-left: auto; /* Push the button to the right */
+  }
+  
+
+.upload-button {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 20px 20px;
+    background-color: #F15946;
+    color: #ffffff;
+    /* background-color: #ffffff; */
+    /* color: #000000; */
+    border: none;
+    margin-left: auto;
+    border-left: 1px solid #000000;
+}
+  
+.upload-button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+  
+/* Hide file input */
+input[type="file"] {
+    display: none;
+}

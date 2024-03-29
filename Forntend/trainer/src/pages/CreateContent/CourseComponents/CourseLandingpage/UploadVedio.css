@@ -1,0 +1,84 @@
+/* videoUpload.css */
+
+.video-container {
+    display: flex;
+    justify-content: space-between; /* Ensure equal spacing between items */
+    background-color: rgb(255, 255, 255);
+    padding: 10px 70px;
+}
+  
+.dummy-video {
+    flex: 1; /* Occupy remaining space */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(184, 184, 184);
+}
+  
+.video-preview {
+    max-width: 475px;
+    max-height: 270px;
+}
+
+.video-placeholder {
+    max-width: 475px;
+    max-height: 270px;
+    /* Add any placeholder video styling here */
+}
+  
+.text-btn {
+    flex: 1.1; /* Occupy remaining space */
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    margin: 0px 12px;
+}
+  
+.video-guidelines {
+    padding: 0px 8px;
+    color: #696969;
+    text-align: justify;
+    font-size: 23px; 
+    font-weight: 100; 
+    font-family: 'Gill Sans MT';
+}
+  
+
+
+.smalll-card label{
+    display: flex;
+    font-size: 22px;
+    color: rgb(94, 94, 94);
+    align-items: center;
+    margin: 30px 10px;
+    width: 95%; /* Adjust width as needed */
+    border: 1px solid #000000; 
+}
+
+
+.selected{
+    flex: 1; /* Allow the text to grow and fill the space */
+    padding: 20px;
+    background-color: rgb(237, 237, 255);
+}
+
+.upload-vedio-btn {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 20px 20px;
+    background-color: #F15946;
+    color: #ffffff;
+    border: none;
+    margin-left: auto;
+    border-left: 1px solid #000000;
+}
+
+.upload-vedio-btn :hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Hide file input */
+input[type="file"] {
+    display: none;
+}

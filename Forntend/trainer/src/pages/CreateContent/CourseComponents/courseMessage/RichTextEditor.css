@@ -1,0 +1,61 @@
+/* RichTextEditor.css */
+
+.rich-text-editor {
+    padding: 10px 70px;
+  }
+
+  .rich-text-editor .toolbar button {
+    background-color: white; 
+    border: none; 
+    padding: 2px 15px; 
+    margin: 0; 
+    cursor: pointer; 
+    border-radius: 4px; 
+    font-size: 18px;
+    font-weight:900; 
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+
+  }
+  
+  .rich-text-editor .toolbar button:hover {
+    background-color: #dddddd; /* Change background color on hover */
+  }
+  
+  .toolbar button svg {
+    filter: drop-shadow(2px 2px 2px rgba(97, 97, 97, 0.4)); /* Apply text-shadow effect */
+  }
+
+
+  .toolbar {
+    border: 1px solid #000000;
+    padding: 8px;
+    /* margin-bottom: 10px; */
+    border-bottom: none;
+
+  }
+  
+  .toolbar button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .toolbar button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .editor-text {
+    border: 1px solid #000000;
+    padding: 10px;
+    min-height: 100px;
+  }
+  
+  .editor:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 3px #007bff;
+  }
+  

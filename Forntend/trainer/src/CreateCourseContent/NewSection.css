@@ -1,0 +1,62 @@
+.make-content button {
+  padding: 15px;
+  margin: 10px 0px;
+  font-weight: 200;
+  font-size: 20px;
+  background-color: #ffffff;
+  border: 1px solid #6f6f6f;
+  color: #000000;
+  cursor: pointer;
+}
+
+.section-view {
+  background-color: rgb(224, 221, 255);
+  border: 1px solid #000000;
+  padding: 20px;
+}
+
+.new-section {
+  background-color: rgb(255, 255, 255);
+  margin-top: 30px;
+}
+
+.new-section-form {
+  display: block;
+  border: 1px solid #000000;
+  padding: 10px;
+}
+
+#save {
+  padding: 15px;
+  font-weight: 200;
+  font-size: 20px;
+  background-color: #ffffff;
+  border: 1px solid #6f6f6f;
+  color: #000000;
+  cursor: pointer;
+}
+
+.new-section-form input {
+  padding: 20px;
+  width: 95%;
+}
+
+.section-input {
+  padding: 0px 30px;
+  margin-left: 100px;
+}
+
+.section-input h4 {
+  margin: 20px 0px;
+}
+
+.close-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.lecture-options{
+    background-color: aliceblue;
+    border: 1px dashed grey;
+}
