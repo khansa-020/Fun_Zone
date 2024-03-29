@@ -21,8 +21,8 @@ const CodingExerciseEditor = ({ language }) => {
   return (
     <div>
       <MonacoEditor
-        width="800"
-        height="400"
+        width="600"
+        height="300"
         language={language}
         theme="vs-dark"
         value={output}
