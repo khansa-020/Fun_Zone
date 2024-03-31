@@ -4,7 +4,7 @@ import { FaTimes } from 'react-icons/fa';
 const NewLecture = ({ handleAddUnit, handleAddQuiz, handleAddCodingExercise, handleClose }) => {
   return (
     <div className='lecture'>      
-        <FaTimes onClick={handleClose}/>
+        <FaTimes className='icn' onClick={handleClose}/>
     <div className="lecture-options">
       <button onClick={handleAddUnit}>+ Unit</button>
       <button onClick={handleAddQuiz}>+ Quiz</button>
