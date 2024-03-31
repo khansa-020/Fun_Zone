@@ -1,34 +1,54 @@
-.make-content button {
-  padding: 15px;
-  margin: 10px 0px;
-  font-weight: 200;
-  font-size: 20px;
+#icon {
+  padding: 5px 5px;
+  margin: 0px 0px;
+  font-family: 'Gill Sans MT';
+  font-size: 18px;
   background-color: #ffffff;
-  border: 1px solid #6f6f6f;
+  color: #000000;
+  cursor: pointer;
+}
+.new-btn{
+  display: flex;
+  padding: 5px 15px;
+  margin-right: 20px;
+  font-weight:bold;
+  font-family: 'Gill Sans MT';
+  font-size: 25px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
   color: #000000;
   cursor: pointer;
 }
 
+#icn{
+  margin: 0px 10px;
+}
 .section-view {
   background-color: rgb(224, 221, 255);
   border: 1px solid #000000;
   padding: 20px;
 }
 
+
+.section-view span{
+  width:auto;
+  
+}
+
+
 .new-section {
-  background-color: rgb(255, 255, 255);
   margin-top: 30px;
 }
 
 .new-section-form {
-  display: block;
-  border: 1px solid #000000;
-  padding: 10px;
+  border: 1px solid #11ca11;
 }
 
 #save {
-  padding: 15px;
-  font-weight: 200;
+  margin: 5px 8px;
+  padding: 5px 25px;
+  font-weight:bold;
+  font-family: 'Gill Sans MT';
   font-size: 20px;
   background-color: #ffffff;
   border: 1px solid #6f6f6f;
@@ -36,27 +56,56 @@
   cursor: pointer;
 }
 
+
+.new-section-box{
+  margin-top: 20px;
+}
+
+.new-section-form .input-container {
+  display: flex;
+  align-items:flex-start;
+}
+.new-section-form .input-right{
+  margin-left: 105px;
+}
 .new-section-form input {
-  padding: 20px;
+  padding: 14px;
   width: 95%;
+  margin-bottom:  10px;
 }
 
 .section-input {
   padding: 0px 30px;
-  margin-left: 100px;
 }
 
 .section-input h4 {
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
-.close-button {
+/* .close-button {
   border: none;
   background-color: transparent;
   cursor: pointer;
-}
+} */
 
+
+
+.lecture {
+  margin-top:30px;
+}
 .lecture-options{
-    background-color: aliceblue;
+    background-color: rgb(234, 251, 238);
     border: 1px dashed grey;
+    padding: 15px 20px;
+    margin-left: 50px;
+
+}
+.lecture-options button{
+  padding:6px 15px;
+  margin-right: 15px;
+  font-family: 'Gill Sans MT';
+  font-size: 22px;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
 }
