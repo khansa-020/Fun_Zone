@@ -6,9 +6,13 @@ import { BrowserRouter, Route, Routes, } from 'react-router-dom';
 
 
 import InstructorProfile from './pages/InstructorProfile/InstructorProfile'
-import CreateCourse from './pages/CreateCourses/New Course/CreateCourse';
 import CourseLandingPage from './pages/CreateCourses/Landing Page/CourseLandingPage';
 import InstructorDashboard from './pages/InstructorDashboard/InstructorDashboard';
+import CreateCourse from './pages/CreateCourses/New Course/CreateCourse';
+import Performance from './pages/Performance/Performance';
+// import ManageCourses from '../CreateCourses/Landing Page/CourseLandingPage';
+// import MYCourses from '../Instructor_Components/MyCourses';
+// import Chat from '../Chat/Chat';
 
 function App() {
   return (
@@ -16,9 +20,13 @@ function App() {
       <Routes>
         
         <Route path='/InstructorDashboard'element={<InstructorDashboard/>}/>
+        <Route path='/Performance'element={<Performance/>}/>
         <Route path='/InstructorProfile'element={<InstructorProfile/>}/>
         <Route path='/CourseLandingPage'element={<CourseLandingPage/>}/>
         <Route path='/CreateCourse' element={<CreateCourse/>}/>
+        {/* <Route path='/MyCourses'element={<MyCourses/>}/> */}
+
+
       </Routes>
     </BrowserRouter>
   );
