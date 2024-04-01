@@ -33,9 +33,12 @@
 }
 .course-sidebar li.active {
   background-color: #ffe3df;
-  border-left-color: #F15946; /* Change border color to red */
+  border-left-color: #F15946; 
 }
 
+.course-sidebar .sidebar-icon{
+  margin-right: 16px;
+}
 
 .course-sidebar button{
   margin-top: 10px;

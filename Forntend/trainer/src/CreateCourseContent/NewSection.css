@@ -23,17 +23,6 @@
 #icn{
   margin: 0px 10px;
 }
-.section-view {
-  background-color: rgb(224, 221, 255);
-  border: 1px solid #000000;
-  padding: 20px;
-}
-
-
-.section-view span{
-  width:auto;
-  
-}
 
 
 .new-section {
@@ -43,6 +32,13 @@
 .new-section-form {
   border: 1px solid #11ca11;
 }
+.make-div{
+  padding: 20px;
+  margin: 20px 0px;
+  background-color: rgb(224, 221, 255);
+  border: 1px solid #000000;
+}
+
 
 #save {
   margin: 5px 8px;

@@ -1,8 +1,13 @@
 import React from 'react'
+import './InstructorProfile.css';
 
 function InstructorProfile() {
   return (
-    <div>InstructorProfile</div>
+    <div className='profile-main'>
+      InstructorProfile
+      
+      
+      </div>
   )
 }
 

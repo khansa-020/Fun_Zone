@@ -5,7 +5,7 @@ import Sidebar from '../Course Sidebar/CourseSidebar';
 import contentComponents from '../../CreateContent/contentComponent'; 
   
 function CourseLandingPage() {
-  const [selectedLink, setSelectedLink] = useState('link3'); 
+  const [selectedLink, setSelectedLink] = useState('link1'); 
   
   const handleLinkClick = (link) => {
     setSelectedLink(link);
@@ -21,9 +21,11 @@ function CourseLandingPage() {
   
 
         <div className='left-side'>
-          <Sidebar selectedLink={selectedLink} handleLinkClick={handleLinkClick} />
+          {/* <Sidebar selectedLink={selectedLink} handleLinkClick={handleLinkClick} /> */}
+          <Sidebar selectedLink={selectedLink} handleLinkClick={handleLinkClick} links={['About Courses', 'Course Structure', 'Landing Page', 'Create Content', 'Pricing', 'Course Messages']} />
         </div>
-        
+      
+
         <div id="course-components" >
           {contentComponents[selectedLink]}
         </div>

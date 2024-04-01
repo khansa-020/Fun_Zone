@@ -53,62 +53,79 @@ const NewSection = () => {
 
   return (
     <div className="make-content">
-      <div className='section-view'>
-        {sections.map(section => (
-          <div key={section.id}>
-            <h3>Unpublished Section: </h3>
-            <span><FaFile id='icn'/>{section.name} - {section.milestone}</span>
-            <FaTrashAlt id='icn' onClick={() => handleDeleteSection(section.id)} /> 
-            <FaEdit id='icn' onClick={() => handleEditSection(section.id)} /> 
-            <button className='new-btn' onClick={() => handleAddLecture(section.id)}> <FaPlus id='icon' onClick={() => handleAddLecture(section.id)} /> Lecture</button>
-          </div>
-        ))}
-
-        {showLectureOptions && (
-          <NewLecture
-            // handleAddUnit={handleAddUnit}
-            // handleAddQuiz={handleAddQuiz}
-            handleAddCodingExercise={handleAddCodingExercise}
-            handleClose={handleCloseLectureOptions}
-          />
-        )}
-
-        {showCodingExerciseEditor && (
-          <CodingExerciseEditor language="javascript" /> 
-        )}
-      </div>
-
-      <div className='new-section'>
-        <button className='new-btn' onClick={() => setIsAddingSection(true)}><FaPlus id='icon' onClick={() => setIsAddingSection(true)} /> Section</button>
-        {isAddingSection && (
-          <div className="new-section-form">
-            <FaTimes id='icn' onClick={handleCancel} /> 
-           <div className='section-input'>
-           <div className="input-container">
-          <h3>New Section :</h3>
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter a Title"
-            value={newSection.name}
-            onChange={handleInputChange}
-          />
+  <div className='section-view'>
+    {sections.map(section => (
+      <div className='make-div' key={section.id}>
+        <h3>Unpublished Section: </h3>
+        <span><FaFile id='icn'/>{section.name} - {section.milestone}</span>
+        {/* <div className="make-div-functionalities"> */}
+          <FaTrashAlt id='icn' onClick={() => handleDeleteSection(section.id)} /> 
+          <FaEdit id='icn' onClick={() => handleEditSection(section.id)} /> 
+          <button className='new-btn' onClick={() => handleAddLecture(section.id)}> <FaPlus id='icon' onClick={() => handleAddLecture(section.id)} /> Lecture</button>
         </div>
-        <div className="input-right">
-            <h4>What will students be able to do at the end of this section?</h4>
+      // </div>
+    ))}
+
+    {showLectureOptions && (
+      <NewLecture
+        // handleAddUnit={handleAddUnit}
+        // handleAddQuiz={handleAddQuiz}
+        handleAddCodingExercise={handleAddCodingExercise}
+        handleClose={handleCloseLectureOptions}
+      />
+    )}
+
+    {showCodingExerciseEditor && (
+      <CodingExerciseEditor language="javascript" /> 
+    )}
+  </div>
+
+
+
+
+
+{/* Adding New Section */}
+      <div className='new-section'>
+      {!isAddingSection && (
+            <button className='new-btn' onClick={() => setIsAddingSection(true)}>
+              <FaPlus id='icon' />Section</button>
+          )}
+        {isAddingSection && (
+        <div className="new-section-form">
+        <FaTimes id='icn' onClick={handleCancel} /> 
+          <div className='section-input'>
+
+            <div className="input-container">
+            <h3>New Section :</h3>
             <input
               type="text"
-              name="milestone"
-              placeholder="Enter a Learning Objective"
-              value={newSection.milestone}
+              name="name"
+              placeholder="Enter a Title"
+              value={newSection.name}
               onChange={handleInputChange}
             /></div>
+
+            <div className="input-right">
+            <h4>What will students be able to do at the end of this section?</h4>
+                <input
+                  type="text"
+                  name="milestone"
+                  placeholder="Enter a Learning Objective"
+                  value={newSection.milestone}
+                  onChange={handleInputChange}/>
             </div>
-            <button  id='save' onClick={handleSaveSection}>Save</button>
-            <button  id='save' onClick={handleCancel}>Cancel</button>
-         </div>
+
+          </div>
+
+      <button  id='save' onClick={handleSaveSection}>Save</button>
+      <button  id='save' onClick={handleCancel}>Cancel</button>    
+      </div>
         )}
       </div>
+
+
+
+
     </div>
   );
 };
