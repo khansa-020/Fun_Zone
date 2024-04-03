@@ -39,7 +39,7 @@ function InstructorDashboard() {
           <li><Link to="/InstructorProfile">Profile</Link></li>
           <li><Link to="/CreateCourse">Create Course</Link></li>
           <li><Link to="/Performance">Performance</Link></li>
-          <li><Link to="/CourseLandingPage">Manage Courses</Link></li>
+          <li><Link to="/CourseLandingPage">Manage Course</Link></li>
           <li><Link to="/my-courses">My Courses</Link></li>
           <li><Link to="/chat">Chat</Link></li>
         </ul>
