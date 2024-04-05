@@ -32,19 +32,18 @@ const ImageUpload = () => {
         </div>
 
         <div className="smal-card">
-                <input
-                    accept=".gif,.jpg,.jpeg,.png"
-                    id="input-file"
-                    type="file"
-                    className="file-input"
-                    onChange={handleImageChange}
-                />
-
-          <label htmlFor="select-image" className="select-file">
+          {/* Use htmlFor="input-file" to associate label with input */}
+          <label htmlFor="input-file" className="select-file">
+            <input
+              accept=".gif,.jpg,.jpeg,.png"
+              id="input-file"
+              type="file"
+              className="file-input"
+              onChange={handleImageChange}
+            />
             <span className="file-selected">{selectedImage ? 'Selected: ' + selectedImage.name : 'No file selected'}</span>
             <span className="upload-button"><span>{selectedImage ? 'Change File' : 'Upload File'}</span></span>
           </label>
-          
         </div>
       </div>
     </div>

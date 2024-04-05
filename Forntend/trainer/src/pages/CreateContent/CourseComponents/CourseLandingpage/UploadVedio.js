@@ -16,6 +16,14 @@ const UploadVideo = () => {
     }
   };
 
+  // Function to handle changing the video
+  const handleChangeVideo = () => {
+    // Reset the selectedVideo state to null
+    setSelectedVideo(null);
+    // Clear the input file value to allow selecting the same file again
+    document.getElementById('input-video').value = '';
+  };
+
   return (
     <div className="video-container">
       <div className="dummy-video">
@@ -45,7 +53,10 @@ const UploadVideo = () => {
 
           <label htmlFor="input-video" className="select-video">
             <span className="selected">{selectedVideo ? 'Selected: ' + selectedVideo.name : 'No video selected'}</span>
-            <span className="upload-vedio-btn"><span>{selectedVideo ? 'Change Video' : 'Upload Video'}</span></span>
+            {/* Use onClick to handle changing the video */}
+            <span className="upload-vedio-btn" onClick={handleChangeVideo}>
+              <span>{selectedVideo ? 'Change Video' : 'Upload Video'}</span>
+            </span>
           </label>
         </div>
       </div>
