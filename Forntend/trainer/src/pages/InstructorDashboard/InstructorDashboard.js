@@ -9,7 +9,7 @@ const InstructorDashboard = () => {
     { url: '/Performance ', label: 'Performance ' },
     { url: '/CourseLandingPage', label: 'Manage Courses' },
     { url: '/MyCourses', label: 'My Courses' },
-    { url: '/Chat', label: 'Chat' }
+    // { url: '/Chat', label: 'Chat' }
   ];
 
   
