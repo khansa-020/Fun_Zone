@@ -11,7 +11,7 @@ import InstructorDashboard from './pages/InstructorDashboard/InstructorDashboard
 import CreateCourse from './pages/CreateCourses/New Course/CreateCourse';
 import Performance from './pages/Performance/Performance';
 // import ManageCourses from '../CreateCourses/Landing Page/CourseLandingPage';
-// import MYCourses from '../Instructor_Components/MyCourses';
+// import MyCourses from '../Instructor_Components/MyCourses';
 // import Chat from '../Chat/Chat';
 
 function App() {
