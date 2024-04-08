@@ -1,3 +1,41 @@
-.profile-main{
-background-color: blue;
-}
+
+
+
+.slider {
+    display: flex;
+    justify-content:flex-start;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    border-bottom: 1px solid grey;
+  }
+  
+  /* Individual option in the slider */
+  .slider .option {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT';
+    transition: background-color 0.3s;
+    color: rgb(90, 90, 90);
+    border-bottom: 5px solid transparent; 
+  }
+  
+  
+  .slider .option:hover{
+    /* background-color: #dbdada;
+    border-bottom-color:  grey; */
+    background-color: #F15946; 
+    border-bottom-color:grey;
+    color:#fafafa
+  }
+  
+  
+  /* Active option in the slider */
+  .slider .option.active{
+    border-bottom-color: #000000; 
+    background-color: #ffffff;
+    color:#000000
+  }
+  
+  
