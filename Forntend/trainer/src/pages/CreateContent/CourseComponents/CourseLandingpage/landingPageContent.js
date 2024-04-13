@@ -3,11 +3,15 @@ import Heading from '../../../../Constants/Heading/heading';
 import RichTextEditor from '../courseMessage/RichTextEditor';
 import ImageUpload from './imageUpload';
 import UploadVideo from './UploadVedio';
+// import Dropdown from './Dropdown';
 import './landingPageCourse.css'; 
 
 function LandingPageContent() { 
   const [courseName, setCourseName] = useState('');
   const [courseSubtitle, setCourseSubtitle] = useState('');
+  const [courseCategory, setCourseCategory] = useState('');
+  const [courseLevel, setCourseLevel] = useState('');
+  const [courseSkill, setCourseSkill] = useState('');
 
   return (
     <div> 
@@ -39,6 +43,83 @@ function LandingPageContent() {
         <div className="fetch-input"> 
           <h6>Description should have minimum 200 words.</h6>
         </div>
+
+        <div className='p-h2'>
+          <h2>Basic Info:</h2>      
+        </div>
+        
+       
+        
+        <div className='DropDown'>
+        <select
+        value={courseLevel}
+        onChange={(e) => setCourseLevel(e.target.value)}
+        required
+      >
+        <option value="" disabled selected>
+          --Select Level--
+        </option>
+        <option value="basic">Basic</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select>
+    
+      <select
+        value={courseCategory}
+        onChange={(e) => setCourseCategory(e.target.value)}
+        required
+      >
+        <option value="" disabled selected>
+          --Select Category--
+        </option>
+        <option value="webDevelopment">Web Development</option>
+        <option value="gameDevelopment">Game Development</option>
+        <option value="dataScience">Data Science</option>
+        <option value="machineLearning">Machine Learning</option>
+        <option value="artificialIntelligence">Artificial Intelligence</option>
+        <option value="dataEngineering">Data Engineering</option>
+        <option value="database">Database</option>
+      </select>
+
+    
+      <select
+        value={courseSkill}
+        onChange={(e) => setCourseSkill(e.target.value)}
+        required
+      >
+        <option value="" disabled selected>
+          --Select Skill--
+        </option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+        <option value="react">React</option>
+        <option value="unity">Unity</option>
+        <option value="cSharpProgramming">C# Programming</option>
+        <option value="python">Python</option>
+        <option value="numpy">NumPy</option>
+        <option value="pandas">Pandas</option>
+        <option value="tensorflow">TensorFlow</option>
+        <option value="keras">Keras</option>
+        <option value="neuralNetworks">Neural Networks</option>
+        <option value="naturalLanguageProcessing">Natural Language Processing (NLP)</option>
+        <option value="computerVision">Computer Vision</option>
+        <option value="reinforcementLearning">Reinforcement Learning</option>
+        <option value="etlProcesses">ETL (Extract, Transform, Load) Processes</option>
+        <option value="bigDataTechnologies">Big Data Technologies (e.g., Hadoop, Spark)</option>
+        <option value="dataPipelines">Data Pipelines</option>
+        <option value="dataWarehousingConcepts">Data Warehousing Concepts</option>
+        <option value="sql">SQL (Structured Query Language)</option>
+        <option value="rdbms">Relational Database Management Systems (RDBMS)</option>
+        <option value="nosqlDatabases">NoSQL Databases</option>
+        <option value="databaseDesignPrinciples">Database Design Principles</option>
+      </select>
+    </div>
+
+
+
+
+        
 
 
         <div className='p-h2'>

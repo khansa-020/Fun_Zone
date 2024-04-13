@@ -43,3 +43,34 @@
     padding: 20px 70px;
     font-size:20px;
   }
+
+
+
+  .DropDown {
+    padding: 20px 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .DropDown select {
+    width: calc(33% - 8px); /* Adjust the width as needed */
+    padding: 20px;
+    border: 1px solid #000000;
+    background-color: #fff;
+    font-size: 22px;
+    font-family: 'Gill Sans';
+    color: rgb(79, 79, 79);
+  }
+
+ 
+
+  .DropDown option {
+    font-size: 18px; 
+    color: gray;
+  }
+  
+  .DropDown select:focus {
+    outline: none;
+  }
+  
