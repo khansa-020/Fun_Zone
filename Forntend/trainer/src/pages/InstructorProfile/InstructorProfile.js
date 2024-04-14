@@ -40,7 +40,7 @@ const ProfileComponent = () => {
           className={`option ${selectedOption === 'settings' ? 'active' : ''}`}
           onClick={() => handleOptionClick('settings')}
         >
-          Profile Settings
+          Privacy Settings
         </div>
       </div>
 

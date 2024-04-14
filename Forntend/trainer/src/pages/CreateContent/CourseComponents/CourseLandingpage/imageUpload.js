@@ -15,7 +15,6 @@ const ImageUpload = () => {
       reader.readAsDataURL(file);
     }
   };
-
   return (
     <div className="image-container">
       <div className="dummy-image">

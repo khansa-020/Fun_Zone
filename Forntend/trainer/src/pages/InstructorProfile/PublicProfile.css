@@ -1,0 +1,59 @@
+.profile-info{
+    padding: 30px 70px;
+    background-color: black;
+    color: #ffffff;
+}
+
+
+.public-image {
+    width: 250px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid purple;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.public-picture {
+    margin: 40px 0px;
+}
+
+  
+.pic-summary {
+    margin: 10px 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  
+  .rating,
+  .reviews,
+  .students,
+  .courses {
+    font-size: 22px;
+    margin: 10px 60px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT';
+  }
+  
+#icon{
+    margin-right: 20px;
+    font-size: 23px;
+
+}
+
+  .biography {
+    margin-top: 10px;
+    padding: 10px 70px;
+    max-width: 600px;
+    line-height: 1.5;
+    text-align: justify;
+    font-size: 20px;
+  }
+
+  .trainer-courses{
+    padding: 10px 70px;
+    font-size: 20px;
+
+  }
