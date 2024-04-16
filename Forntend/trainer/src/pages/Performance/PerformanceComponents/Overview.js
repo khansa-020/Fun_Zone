@@ -7,8 +7,9 @@ function Overview() {
   return (
     <div>
     <Heading text="Overview" />
-<div className='total'>
+    <p className='Overview-p'>Get top insights about your performance</p>
 
+<div className='total'>
 
 <Heading text="Overview" />
 
