@@ -7,7 +7,7 @@ function Overview() {
   return (
     <div>
     <Heading text="Overview" />
-    <p className='Overview-p'>Get top insights about your performance</p>
+    <h2 className='Overview-p'>Get top insights about your performance</h2>
 
 <div className='total'>
 
