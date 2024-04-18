@@ -1,11 +1,71 @@
-.Overview-p{
+.Overview-p {
     padding: 20px 70px;
 }
 
-.total{
-    padding: 20px 0px;
-    margin: 25px 20px 20px 20px;
+.total {
+    padding: 20px 40px;
+    margin: 20px 72px;
     background-color: #ffffff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     z-index: 2;
+}
+
+.total-box {
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #ccc;
+}
+
+.counter {
+    padding: 0px 70px 0px 0px;
+    border-bottom: 5px solid #cb2121;
+}
+
+.counter:active {
+    background-color: black;
+  }
+
+  .counter:hover  {
+    font-weight: bold;
+    color: #cb2121;
+    background-color: chartreuse;
+  }
+  
+/* CSS for changing color of the selected counter */
+.counter::selected {
+    background-color: red; /* Change to your desired color */
+  }
+  
+  
+
+.counter h3, .counter p, .counter h1 {
+    margin-bottom: 16px;
+    color: rgb(97, 97, 97);
+}
+
+.counter h3 {
+    font-family: 'Gill Sans';
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.counter h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.counter p {
+    font-family: 'Gill Sans';
+    font-size: 18px;
+}
+
+
+.data-tables {
+    height: 600px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }

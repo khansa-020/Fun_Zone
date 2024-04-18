@@ -1,35 +1,20 @@
+// trainerProfileModel.js
+
 const mongoose = require('mongoose');
 
-const trainerSchema = new mongoose.Schema({
-    fullName: {
-        type:String,
-        requried: true
-    },
-    email: {
-        type:String,
-        requried: true,
-        unique:true
-    },
-    phoneNumber: {
-        type: Number,
-        requried: true
-    },
-    experience:{
-        type: String,
-        requried: true,
-        enum: ['yes', 'no']
-    },
-    address:{
-        type: String,
-        requried: true
-    },
-    city:{
-        type: String,
-        requried: true
-    },
-    education:{
-        type: String,
-        requried: true
-    }
+const trainerProfileSchema = new mongoose.Schema({
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true },
+  headline: { type: String, required: true },
+  biography: { type: String, required: true },
+  language: { type: String, required: true },
+  website: { type: String },
+  twitter: { type: String },
+  github: { type: String },
+  linkedin: { type: String },
+  youtube: { type: String },
 });
-module.exports = mongoose.model("trainer", trainerSchema);
+
+const TrainerProfile = mongoose.model('TrainerProfile', trainerProfileSchema);
+
+module.exports = TrainerProfile;
