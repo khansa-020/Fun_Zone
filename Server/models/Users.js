@@ -16,22 +16,22 @@ const usersSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
-
+  
   livesin: {
     type: String,
     trim: true,
   },
-
   worksAt: {
     type: String,
     trim: true,
   },
+
   profilePicture: String,
   coverPicture: String,
   about: String,
   relationship: String,
-  followers: [] ,
-  following: [] ,
+  followers: [],
+  following: [],
 
   is_admin: {
     type: Boolean,
@@ -59,6 +59,51 @@ const usersSchema = new mongoose.Schema({
     default: Date.now,
   },
   deletedAt: { type: Date },
+
+
+
+  // Trainer-specific fields
+  trainerCnic:{
+    type: String,
+    trim: true,
+  },
+
+  trainerEmail: {
+    type: String,
+    trim: true,
+
+  },
+  trainerPassword: {
+    type: String,
+    trim: true,
+  },
+  firstName: { 
+    type: String,
+  },
+
+  lastName: { 
+    type: String,
+  },
+  
+  headline: { 
+    type: String ,
+  },
+
+  biography: { 
+    type: String ,
+  },
+
+  language: { type: String },
+  website: { type: String },
+  twitter: { type: String },
+  github: { type: String },
+  linkedin: { type: String },
+  youtube: { type: String },
+
+  trainerPicture:{
+    type: String
+  }
+
 });
 
 // Create a model based on the schema
