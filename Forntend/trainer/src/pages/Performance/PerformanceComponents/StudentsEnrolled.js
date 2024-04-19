@@ -7,6 +7,9 @@ function StudentsEnrolled() {
     <div>
     <Heading text="Enrolled Student" />
       
+      <div className='Enrollment-datatable'>
+
+      </div>
     </div>
   )
 }
