@@ -1,6 +1,5 @@
 const User = require('../../models/Users'); 
 const bcrypt = require('bcrypt');
-const { createToken, verifyToken } = require('../../helpers/jwt');
 
 // // Get user profile
 // const getUserProfile = async (req, res) => {

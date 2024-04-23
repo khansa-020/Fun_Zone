@@ -38,6 +38,15 @@ const usersSchema = new mongoose.Schema({
     default: false,
     required: true,
   },
+  
+  isAdministrator: {
+    type: Boolean,
+    default: false,
+  },
+  isTrainer: {
+    type: Boolean,
+    default: false,
+  },
   is_verified: {
     type: Boolean,
     default: false,
@@ -60,49 +69,6 @@ const usersSchema = new mongoose.Schema({
   },
   deletedAt: { type: Date },
 
-
-
-  // Trainer-specific fields
-  trainerCnic:{
-    type: String,
-    trim: true,
-  },
-
-  trainerEmail: {
-    type: String,
-    trim: true,
-
-  },
-  trainerPassword: {
-    type: String,
-    trim: true,
-  },
-  firstName: { 
-    type: String,
-  },
-
-  lastName: { 
-    type: String,
-  },
-  
-  headline: { 
-    type: String ,
-  },
-
-  biography: { 
-    type: String ,
-  },
-
-  language: { type: String },
-  website: { type: String },
-  twitter: { type: String },
-  github: { type: String },
-  linkedin: { type: String },
-  youtube: { type: String },
-
-  trainerPicture:{
-    type: String
-  }
 
 });
 
