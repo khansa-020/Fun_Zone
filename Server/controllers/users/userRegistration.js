@@ -47,49 +47,72 @@
 
 
 
+
 const User = require("../../models/Users");
 const { hashPassword } = require("../../helpers/hashPassword");
 const { createToken } = require("../../helpers/jwt");
+const { sendVerifyMail } = require("../../helpers/sendVerifyMail"); // Assuming you have a helper function for sending emails
+const VerificationModel = require("../../models/VerificationModel");
 
 class UserController {
-    static userRegistration = async (req, res) => {
+    static async userRegistration(req, res) {
         try {
-            const { username, email, password, trainerPassword } = req.body;
-
+            const { username, email, password, status } = req.body;
+            // Validate username, email, and password
             if (!username || !email || !password) {
                 return res.status(422).json({ error: "Please provide username, email, and password" });
             }
 
-            const userExist = await User.findOne({ email });
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                return res.status(422).json({ error: "Invalid email format" });
+            }
 
+            // Password validation
+            if (password.length < 8 || !/[!@#$%^&*]/.test(password)) {
+                return res.status(422).json({ error: "Password should be at least 8 characters long and contain a symbol or special character" });
+            }
+
+            // Check if user already exists
+            const userExist = await User.findOne({ email });
             if (userExist) {
                 return res.status(422).json({ error: "User already exists" });
             }
 
+            // Hash password
             const hashedPassword = await hashPassword(password);
 
-            const user = new User({
+            // Create new user
+            const newUser = new User({
                 username,
                 email,
                 password: hashedPassword,
+                status: status || "active"
             });
 
-            // Set the trainerPassword if provided
-            if (trainerPassword) {
-                const hashedTrainerPassword = await hashPassword(trainerPassword);
-                user.trainerPassword = hashedTrainerPassword;
-            }
+            // Save user
+            const savedUser = await newUser.save();
 
-            const savedUser = await user.save();
+            // Send verification email
+            await sendVerifyMail(username, email, savedUser._id);
 
-            // Generate JWT Token using the saved user object
+            // Create verification record
+            const verificationData = {
+                username,
+                email,
+                password: hashedPassword,
+                userId: savedUser._id,
+            };
+            const verificationRecord = new VerificationModel(verificationData);
+            await verificationRecord.save();
+
+            // Generate JWT Token
             const token = createToken(savedUser, false, '1d');
-
-            // Save the token
-            savedUser.tokens = savedUser.tokens.concat({ token });
+            savedUser.tokens = savedUser.tokens.concat({ token });            
             await savedUser.save();
 
-            res.status(201).json({ message: "User registered successfully", token });
+            res.status(201).json({ message: "User registered successfully. Verification email sent.", token });
 
         } catch (error) {
             console.error("Error in user registration:", error);

@@ -3,6 +3,11 @@
 const mongoose = require('mongoose');
 
 const trainerProfileSchema = new mongoose.Schema({
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: "users",
+  },
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
   headline: { type: String, required: true },
@@ -13,6 +18,8 @@ const trainerProfileSchema = new mongoose.Schema({
   github: { type: String },
   linkedin: { type: String },
   youtube: { type: String },
+  trainerPicture:{ type: String },
+  status: { type: String, default: "pending"},
 });
 
 const TrainerProfile = mongoose.model('TrainerProfile', trainerProfileSchema);
