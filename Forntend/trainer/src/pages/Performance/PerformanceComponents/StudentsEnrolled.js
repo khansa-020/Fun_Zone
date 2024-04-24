@@ -7,7 +7,7 @@ function StudentsEnrolled() {
     <div>
     <Heading text="Enrolled Student" />
       
-      <div className='Enrollment-datatables'>
+      <div className='Enrolment-datatables'>
 
       </div>
     </div>
