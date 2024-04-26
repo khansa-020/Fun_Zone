@@ -2,13 +2,10 @@ const express = require('express');
 const router = express.Router();
 const trainerRequest = require('../controllers/ApplyTrainer/TrainerRequest');
 
-// Get all TrainerRequests
-router.get('/trainer-requests', trainerRequest.getTrainerRequests);
 
-// Update TrainerRequest by ID
-router.put('/trainer-requests/:trainerRequestId', trainerRequest.updateTrainerRequest);
+router.get('/trainer-requests', trainerRequest.getTrainerRequests);// Get all TrainerRequests
+router.put('/trainer-requests/:trainerRequestId', trainerRequest.updateTrainerRequest);// Update TrainerRequest by ID
+router.post('/trainer-requests', trainerRequest.addTrainerRequest);// Add new TrainerRequest
 
-// Add new TrainerRequest
-router.post('/trainer-requests', trainerRequest.addTrainerRequest);
 
 module.exports = router;

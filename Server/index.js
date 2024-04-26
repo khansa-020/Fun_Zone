@@ -13,6 +13,8 @@ const contactRoutes = require('./routes/sendEmail.js');
 const profileRoutes =require('./routes/profile.js');
 const trainerRequest = require('./routes/trainerRequest');
 const chatRoomRoutes = require('./routes/chatRoom');
+// const trainerRoutes =require('./routes/trainerroutes');
+const adminRoutes =require('./routes/AdminRoute');
 
 
 //configuration
@@ -37,6 +39,7 @@ app.use('/api',contactRoutes);
 app.use('/api', profileRoutes);
 app.use('/api', trainerRequest);
 app.use('/api', chatRoomRoutes);
+app.use('/api', adminRoutes);
 
 
 app.listen(5000, () => {
