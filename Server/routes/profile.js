@@ -1,24 +1,48 @@
 const express = require('express');
 const router = express.Router();
+const { authMiddleWare } = require('../helpers/authMiddleware');
+// const authMiddleware= require("../helpers/authMiddleware") ;
+
 // const userProfile = require('../controllers/users/userProfile');
-const { getUser, updateUser, deleteUser, followUser, UnFollowUser } = require('../controllers/users/userProfile');
+const {
+    getAllUsers,
+    // getAllSearchUsers,
+    getUser,
+    updateUser,
+    deleteUser,
+    followUser,
+    UnFollowUser,
+    addUser,
+    removeUser,
+    updateUserByAdmin,
+ } = require('../controllers/users/userProfile');
 
-// import { deleteUser, followUser, getUser, UnFollowUser, updateUser } from "../Controllers/UserController.js";
 
 
-// Route to get user profile
 // router.get('/user/profile', userProfile.getUserProfile);
-
-// Route to update user profile
 // router.put('/user/update-profile', userProfile.updateUserProfile);
 
-// Route to get ,update, delete user 
+//Route getAllUsers, getSearch
+router.get("/user/profile/", getAllUsers);
+// router.get("/user/profile/search", getAllSearchUsers);
+
+
+//Route UdateByAdmin
+// router.get('/user/profile/:id/update',authMiddleWare, updateUserByAdmin);
+router.get('/user/profile/:id/update', updateUserByAdmin);
+
+
+// Route (get,update,delete) User 
 router.get('/user/profile/:id', getUser)
-router.put('/user/profile/:id', updateUser)
+router.put("/user/profile/:id", updateUser);
 router.delete('/user/profile/:id', deleteUser)
 
-// Route for followres and following
+// Route (followres,following,Add & Remove Follower)
 router.put('/user/profile/:id/follow', followUser)
 router.put('/user/profile/:id/unfollow', UnFollowUser)
+router.put("/user/profile/:id/addstudent", addUser);
+router.put("/user/profile/:id/removestudent",removeUser);
+
+
 
 module.exports = router;
