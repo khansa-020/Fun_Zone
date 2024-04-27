@@ -96,8 +96,8 @@ const changeAccountStatus = async (req, res) => {
     const user = await User.findOne({ _id: trainer.userId });
     const notification = user.notification;
     notification.push({
-      type: "supervisor-account-request-updated",
-      message: `Your Supervisor Account Request has been ${status}`,
+      type: "Trainer-account-request-updated",
+      message: `Your Trainer Account Request has been ${status}`,
       onClickPath: "/notification",
     });
     user.isTrainer = status === "approved" ? true : false;
@@ -181,16 +181,18 @@ const deleteTrainerRequest = async (req, res) => {
   }
 };
 
+
+
+
 module.exports = {
-            getAllUsers,
-            getAllTrainers,
-            getAllStudents,
-            getAllTrainedStudents,
-            getAllApprovedTrainers,
-            changeAccountStatus,
-            deleteUser,
-            deleteTrainer,
-            deleteTrainerRequest
-            
-        };
+    getAllUsers,
+    getAllTrainers,
+    getAllStudents,
+    getAllTrainedStudents,
+    getAllApprovedTrainers,
+    changeAccountStatus,
+    deleteUser,
+    deleteTrainer,
+    deleteTrainerRequest,
+  };
 

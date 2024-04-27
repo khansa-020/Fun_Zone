@@ -10,9 +10,9 @@ const {
   getAllStudents,
   getAllTrainedStudents,
   getAllTrainers,
-  getAllUsers,
-  totalStudents,
-  totalTrainers,
+  getAllUsers
+//   totalStudents,
+//   totalTrainers,
 } = require('../controllers/users/AdminController.js');
 
 // const authMiddleware = require("../Middleware/authMiddleware.js");
@@ -24,8 +24,8 @@ router.get("/:id/getalltrastudents", getAllTrainedStudents);
 router.get("/getalltrainers",  getAllTrainers);
 router.get("/getallapprovedtrainers",  getAllApprovedTrainers);
 router.post("/changeaccountstatus",  changeAccountStatus);
-router.get("/students/count", totalStudents);
-router.get("/trainers/count", totalTrainers);
+// router.get("/students/count", totalStudents);
+// router.get("/trainers/count", totalTrainers);
 
 
 router.delete("/:id/deleteuser", deleteUser);
