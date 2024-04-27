@@ -1,6 +1,8 @@
 const User = require('../../models/Users'); 
+const TrainerModel =require('../../models/Trainer');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
+const { request } = require('express');
 
 
 // get all users
@@ -272,6 +274,52 @@ const removeUser = async (req, res) => {
 };
 
 
+//Get all search users
+const getAllSearchUsers = async (req, res) => {
+  const keyword = req.query.search
+    ? {
+        $or: [
+          { username: { $regex: req.query.search, $options: "i" } },
+          { email: { $regex: req.query.search, $options: "i" } }, // i means case insensitive
+        ],
+      }
+    : {};
+  const users = await User.find(keyword);
+  res.send(users);
+};
+
+//Apply For Trainer
+const addTrainer = async (req, res) => {
+  try {
+    const newTrainer = await TrainerModel({
+      ...req.body,
+      status: "pending",
+    });
+    await newTrainer.save();
+    const administrator = await User.findOne({ isAdministrator: true });
+
+    if (administrator && administrator.notification) {
+      const notification = administrator.notification;
+      notification.push({
+        type: "apply-trainer-request",
+        message: `${newTrainer.username} with email ${newTrainer.email} has applied for a Trainer Account`,
+        data: {
+          trainerId: newTrainer._id,
+          name: newTrainer.username,
+          onClickPath: "/administrator/trainers",
+        },
+      });
+      await User.findByIdAndUpdate(administrator._id, { notification });
+    }
+    res.status(201).send({
+      success: true,
+      message: "Trainer Account Applied Successfully!",
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+};
 
 
 
@@ -279,5 +327,5 @@ const removeUser = async (req, res) => {
 
 module.exports = {
   getAllUsers, deleteUser, getUser, updateUser, followUser, UnFollowUser, addUser, removeUser ,
-  updateUserByAdmin
+  updateUserByAdmin, getAllSearchUsers, addTrainer
 };

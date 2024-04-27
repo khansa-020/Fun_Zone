@@ -6,7 +6,7 @@ const { authMiddleWare } = require('../helpers/authMiddleware');
 // const userProfile = require('../controllers/users/userProfile');
 const {
     getAllUsers,
-    // getAllSearchUsers,
+    getAllSearchUsers,
     getUser,
     updateUser,
     deleteUser,
@@ -15,6 +15,7 @@ const {
     addUser,
     removeUser,
     updateUserByAdmin,
+    addTrainer,
  } = require('../controllers/users/userProfile');
 
 
@@ -24,11 +25,10 @@ const {
 
 //Route getAllUsers, getSearch
 router.get("/user/profile/", getAllUsers);
-// router.get("/user/profile/search", getAllSearchUsers);
+router.get("/user/profile/search", getAllSearchUsers);
 
 
 //Route UdateByAdmin
-// router.get('/user/profile/:id/update',authMiddleWare, updateUserByAdmin);
 router.get('/user/profile/:id/update', updateUserByAdmin);
 
 
@@ -42,6 +42,9 @@ router.put('/user/profile/:id/follow', followUser)
 router.put('/user/profile/:id/unfollow', UnFollowUser)
 router.put("/user/profile/:id/addstudent", addUser);
 router.put("/user/profile/:id/removestudent",removeUser);
+
+
+router.post("/user/profile/addTrainer", addTrainer);
 
 
 

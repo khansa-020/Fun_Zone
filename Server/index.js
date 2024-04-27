@@ -13,8 +13,13 @@ const contactRoutes = require('./routes/sendEmail.js');
 const profileRoutes =require('./routes/profile.js');
 const trainerRequest = require('./routes/trainerRequest');
 const chatRoomRoutes = require('./routes/chatRoom');
-// const trainerRoutes =require('./routes/trainerroutes');
-const adminRoutes =require('./routes/AdminRoute');
+
+const trainerRoutes = require('./routes/TrainerRoute');
+const adminRoutes = require('./routes/AdminRoute');
+const PostRoutes =require('./routes/PostRoute.js');
+const ChatRoutes =require('./routes/ChatRoute.js');
+const MessageRoutes =require('./routes/MessageRoute.js');
+
 
 
 //configuration
@@ -39,7 +44,15 @@ app.use('/api',contactRoutes);
 app.use('/api', profileRoutes);
 app.use('/api', trainerRequest);
 app.use('/api', chatRoomRoutes);
+app.use('/api', trainerRoutes);
 app.use('/api', adminRoutes);
+app.use('/api', PostRoutes);
+app.use('/api', ChatRoutes);
+app.use('/api', MessageRoutes);
+
+
+
+
 
 
 app.listen(5000, () => {

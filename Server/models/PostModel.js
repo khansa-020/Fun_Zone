@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-// const  ObjectId = mongoose.Types.ObjectId();
+const mongoose = require("mongoose");
+
 const postSchema = mongoose.Schema(
   {
     userId: { type: String, required: true },
@@ -24,5 +24,7 @@ const postSchema = mongoose.Schema(
     timestamps: true,
   }
 );
+
 const PostModel = mongoose.model("Posts", postSchema);
-export default PostModel;
+
+module.exports = PostModel;
