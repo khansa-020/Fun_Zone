@@ -12,10 +12,10 @@ const {
 
 const router = express.Router();
 
-router.post("/", createPost);
-router.get("/:id", getPost);
-router.put("/:id", updatePost);
-router.delete("/:id", deletePost);
+router.post("/createpost", createPost);
+router.get("/:id/getpost", getPost);
+router.put("/:id/updatepost", updatePost);
+router.delete("/:id/deletepost", deletePost);
 router.delete("/deletepostbyadmin/:id", deletePostByAdmin);
 router.put("/:id/like", LikePost);
 router.put("/:id/comment", CommentPost);

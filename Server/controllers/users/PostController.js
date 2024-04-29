@@ -1,7 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const PostModel = require("../../models/PostModel.js");
 const mongoose = require("mongoose");
-const UserModel = require("../../models/Users.js");
+const User = require("../../models/Users.js");
 
 const createPost = asyncHandler(async (req, res) => {
   const newPost = new PostModel(req.body);
@@ -112,7 +112,7 @@ const getTimeLinePosts = asyncHandler(async (req, res) => {
   const userId = req.params.id;
   try {
     const currentUserPosts = await PostModel.find({ userId: userId });
-    const followingPosts = await UserModel.aggregate([
+    const followingPosts = await User.aggregate([
       {
         $match: {
           _id: new mongoose.Types.ObjectId(userId),

@@ -7,8 +7,8 @@ const postSchema = mongoose.Schema(
       type: String,
       // required: true
     },
-    desc: String,
-    comment: String,
+    desc: {type:String},
+    comment: {type:String},
     likes: [],
     comments: [
       {
@@ -16,9 +16,9 @@ const postSchema = mongoose.Schema(
         username: String,
       },
     ],
-    image: String,
-    video: String,
-    filename: String,
+    image: {type:String},
+    video: {type:String},
+    filename: {type:String},
   },
   {
     timestamps: true,

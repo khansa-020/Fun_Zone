@@ -1,8 +1,10 @@
 const express = require("express");
 const multer = require('multer');
+const bodyParser = require('body-parser');
 const cors= require("cors");
 //const dotenv = require('dotenv');
-const bodyParser = require('body-parser');
+
+const socketSetup = require("./socket"); // Import the socket setup file
 require('dotenv').config();
 require("./db/config");
 
@@ -52,17 +54,18 @@ app.use('/api', MessageRoutes);
 
 
 
-
-
-
-app.listen(5000, () => {
+const server = app.listen(5000, () => {
   console.log("server is running");
 });
 
 
+// app.listen(5000, () => {
+//   console.log("server is running");
+// });
 
 
 
+socketSetup(server)
 
 
 
