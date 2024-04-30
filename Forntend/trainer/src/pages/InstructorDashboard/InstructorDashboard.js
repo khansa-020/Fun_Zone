@@ -1,6 +1,7 @@
 import React from 'react';
 import Sidebar from './InstructorSidebar'; 
 import Logo from '../.././Constants/Logo/logo';
+import admin from "../../../src/admin.jpg";
 // import './InstructorDashboard.css'; 
 
 const InstructorDashboard = () => {
@@ -22,8 +23,11 @@ const InstructorDashboard = () => {
       </div>
   
 
+<div > <Sidebar links={links}  /></div>
+      <div>
+      <img src={admin.img} alt="" />
 
-      <Sidebar links={links}  />
+      </div>
 
     </div>
   );
